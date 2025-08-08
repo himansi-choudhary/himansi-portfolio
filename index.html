@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information for SEO, responsiveness, and social sharing -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Basic SEO -->
+    <meta name="description" content="Himansi's personal portfolio showcasing skills, projects, and contact information.">
+    <meta name="keywords" content="Himansi, portfolio, web developer, projects, skills, contact, certificates, achievements">
+    <meta name="author" content="Himansi">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Instagram) -->
+    <meta property="og:title" content="Himansi Portfolio">
+    <meta property="og:description" content="Explore Himansi's skills, achievements, and projects. Get in touch for collaboration.">
+    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Himansi Portfolio">
+    <meta name="twitter:description" content="Explore Himansi's skills, achievements, and projects. Get in touch for collaboration.">
+    <meta name="twitter:image" content="https://yourdomain.com/images/og-image.jpg">
+
+    <title>Himansi Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/ca4a1ede15.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon icon shown in browser tab -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <!-- ------------------ Header Section ------------------ -->
+        <section id="header">
+            <div class="container">
+                <nav aria-label="Main navigation" role="navigation">
+                    <!-- Logo -->
+                    <img src="images/logo.png" class="logo" alt="Himansi logo">
+
+                    <!-- Navigation menu -->
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#tools">Tools</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <!-- Open menu icon (for mobile) -->
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+
+                <!-- Header text / Introduction -->
+                <div class="header-text">
+                    <p>Frontend Developer | Python Learner</p>
+                    <h1>Hi, I'm <span>Himansi</span><br>Choudhary,<br>a Tech Enthusiast</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------- About Section ------------------------- -->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <!-- Profile image -->
+                    <div class="about-col-1">
+                        <img src="images/user.png" alt="Himansi photo">
+                    </div>
+                    <!-- About me content -->
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I’m a dedicated BCA student with a strong interest in frontend development and Python programming. I’ve built hands-on projects like an Amazon clone (HTML/CSS), a virtual assistant (Python), and a responsive calculator. I enjoy solving problems and turning creative ideas into real, working solutions.</p>
+
+                        <!-- Tab titles -->
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
+                            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                        </div>
+
+                        <!-- Skills tab -->
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>HTML, CSS, JavaScript (Basics)</li>
+                                <li><span>Python Programming</span><br>Basic projects and virtual assistant app</li>
+                                <li><span>Version Control</span><br>Git and GitHub</li>
+                                <li><span>Tools</span><br>Power BI, MS Office, Canva</li>
+                                <li><span>Soft Skills</span><br>Presentation, Communication, Teamwork</li>
+                            </ul>
+                        </div>
+
+                        <!-- Experience tab -->
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2025</span><br>Built a Python-based Virtual Assistant</li>
+                                <li><span>2024</span><br>Created Amazon Clone using HTML & CSS</li>
+                                <li><span>2024</span><br>Participated in Blind Coding (2nd Place)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Education tab -->
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2022 - Present</span><br>BCA at Savitribai Phule Pune University</li>
+                                <li><span>2024</span><br>Completed TCS iON Career Edge - Young Professional</li>
+                                <li><span>2024</span><br>Completed Power BI Micro Course (7 Days)</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------------------- Tools & technologies Section ------------------------- -->
+        <section id="tools">
+            <div class="container">
+                <h1 class="sub-title">Tools & Technologies</h1>
+                <div class="tools-container">
+                    <!-- Scroll arrows -->
+                    <button class="scroll-arrow left" id="scrollLeft" aria-label="Scroll Left">&#9664;</button>
+
+                    <!-- Tools logo scroll area -->
+                    <div class="tools-scroll-wrapper">
+                        <!-- Each tool with icon and label -->
+                        <div class="tool" style="animation-delay: 0s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
+                            <span>HTML</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 0.5s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
+                            <span>CSS</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 1s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 1.5s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
+                            <span>Python</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 2s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 3s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy">
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 1s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" loading="lazy">
+                            <span>C</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 1.5s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy">
+                            <span>C++</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 2s;">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
+                            <span>Java</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 2.5s;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftword.svg" alt="Microsoft Word" loading="lazy" style="filter: invert(16%) sepia(82%) saturate(4323%) hue-rotate(206deg) brightness(92%) contrast(96%);">
+                            <span>Word</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 3s;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftexcel.svg" alt="Microsoft Excel" loading="lazy" style="filter: invert(29%) sepia(78%) saturate(368%) hue-rotate(83deg) brightness(90%) contrast(90%);">
+                            <span>Excel</span>
+                        </div>
+                        <div class="tool" style="animation-delay: 3.5s;">
+                            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftpowerpoint.svg" alt="Microsoft PowerPoint" loading="lazy" style="filter: invert(50%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(95%) contrast(90%);">
+                            <span>PowerPoint</span>
+                        </div>
+                    </div>
+                    <button class="scroll-arrow right" id="scrollRight" aria-label="Scroll Right">&#9654;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ------------ Achievements & Certifications Section ------------- -->
+        <section id="achievements">
+            <div class="container">
+                <h1 class="sub-title">Achievements & Certifications</h1>
+                <div class="achievements-list">
+                    <!-- Each achievement block -->
+                    <div>
+                        <i class="fas fa-medal"></i>
+                        <h2>2nd Rank - Blind Coding</h2>
+                        <p>Secured 2nd position in a blind coding competition at an inter-college tech fest.</p>
+                        <a href="certificates/Blind_Coding_2ndRank.pdf" target="_blank">See Certificate</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-robot"></i>
+                        <h2>AI Primer - Infosys</h2>
+                        <p>Completed the Artificial Intelligence Primer course by Infosys Springboard platform.</p>
+                        <a href="certificates/Infosys-Artificial_Intelligence_Primer_Certification.pdf" target="_blank">See Certificate</a>
+                    </div>
+                    <div>
+                        <i class="fas fa-award"></i>
+                        <h2>Avishkaar Participation</h2>
+                        <p>Presented a creative tech-based solution as a participant in the Avishkaar event.</p>
+                        <a href="certificates/Avishkar_Participation_Certificate.pdf" target="_blank">See Certificate</a>
+                    </div>
+                </div>
+                <a href="achievements.html" class="btn">See more</a>
+            </div>
+        </section>
+
+        <!-- ------------------------- Portfolio Section ------------------------- -->
+        <section id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <!-- All Projects -->
+                    <div class="work">
+                        <img src="images/work1.png" alt="Project 1" loading="lazy">
+                        <div class="layer">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>This is the portfolio website you are currently viewing, designed with HTML, CSS, andJavaScript.</p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work2.png" alt="Project 2" loading="lazy">
+                        <div class="layer">
+                            <h3>Jarvis Virtual Assistant</h3>
+                            <p>A voice-enabled desktop assistant that performs tasks like opening apps, searching Google,and more.</p>
+                            <a href="https://github.com/himansi-choudhary/Jarvis_Assistant.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work3.png" alt="Project 3" loading="lazy">
+                        <div class="layer">
+                            <h3>Netflix Clone</h3>
+                            <p>A fully responsive front-end clone of Netflix, built using HTML and CSS for practice.</p>
+                            <a href="https://github.com/himansi-choudhary/Netflix_Clone_by-me.git"><i class="fa-solid fa-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="portfolio.html" class="btn">See more</a>
+            </div>
+        </section>
+
+        <!-- ------------------------- Contact Section ------------------------- -->
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+                    <!-- Left column: contact info -->
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i> himansisolanki28@gmail.com</p>
+                        <!-- Social links -->
+                        <div class="social-icons" aria-label="Social meadia links">
+                            <a href="https://www.linkedin.com/in/himansi-choudhary/" title="linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/himansi-choudhary" title="GitHub" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="Instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <a href="images/Himansi's_resume.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+
+                    <!-- Right column: contact form -->
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <!-- Honeypot field to trap bots -->
+                            <input type="text" name="hidden_field" id="hidden_field" style="display:none">
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ------------------ Footer ------------------ -->
+    <footer class="copyright">
+        <p>&copy; 2025 Himansi Choudhary | Built with ❤️ using HTML, CSS & JS</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
