@@ -1,7 +1,7 @@
-/* */
 // Tab switching functionality
 const tablinks = document.getElementsByClassName("tab-links");
 const tabcontents = document.getElementsByClassName("tab-contents");
+
 function opentab(tabname, event) {
     for (let tablink of tablinks) {
         tablink.classList.remove("active-link");
@@ -13,27 +13,35 @@ function opentab(tabname, event) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
-// Close side menu when any nav link is clicked
-const sidemenu = document.getElementById("sidemenu");
-document.querySelectorAll("nav ul li a").forEach(link => {
-    link.addEventListener("click", () => {
-        sidemenu.style.right = "-200px";
+// Attach event listeners to tab links dynamically
+document.querySelectorAll('.tab-links').forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        opentab(tab.getAttribute('data-tab'), e);
     });
 });
 
+/* ------------------------- Side Menu ------------------------- */
+const sidemenu = document.getElementById('sidemenu');
+const menuOpen = document.getElementById('menuOpen');
+const menuClose = document.getElementById('menuClose');
 
-// Functions to open and close the side menu
-function openmenu() {
-    sidemenu.style.right = "0";
-}
+// Open side menu
+menuOpen.addEventListener('click', () => {
+    sidemenu.style.right = '0';
+});
 
-function closemenu() {
-    sidemenu.style.right = "-200px";
-}
+// Close side menu
+menuClose.addEventListener('click', () => {
+    sidemenu.style.right = '-200px';
+});
 
+// Close menu when any nav link is clicked
+document.querySelectorAll('#sidemenu li a').forEach(link => {
+    link.addEventListener('click', () => {
+        sidemenu.style.right = '-200px';
+    });
+});
 
-
-/* */
 // Horizontal scroll with arrow buttons for a tools container
 const scrollWrapper = document.querySelector('.tools-scroll-wrapper');
 const scrollLeftBtn = document.getElementById('scrollLeft');
@@ -64,7 +72,7 @@ window.addEventListener('resize', updateArrowVisibility);
 updateArrowVisibility();
 
 
-/* */
+
 // Form submission to Google Sheets via Google Apps Script
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz2TBL8l8PJO6rl5bSKC40zBnSBFhojR9Nb-ZgiM0Jq40Bmh3LdkqWl_4PwRWF1SBzZpA/exec';
 const form = document.forms['submit-to-google-sheet'];

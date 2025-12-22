@@ -8,7 +8,6 @@
 
     <!-- Basic SEO -->
     <meta name="description" content="Himansi's personal portfolio showcasing skills, projects, and contact information.">
-    <meta name="keywords" content="Himansi, portfolio, web developer, projects, skills, contact, certificates, achievements">
     <meta name="author" content="Himansi">
 
     <!-- Open Graph (Facebook, WhatsApp, LinkedIn, Instagram) -->
@@ -27,10 +26,10 @@
     <title>Himansi Portfolio</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/ca4a1ede15.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-pj+0wRbJt3aZOmVbGzU2y/...your-integrity-hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicon icon shown in browser tab -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -41,9 +40,9 @@
         <!-- ------------------ Header Section ------------------ -->
         <section id="header">
             <div class="container">
-                <nav aria-label="Main navigation" role="navigation">
+                <nav aria-label="Main navigation">
                     <!-- Logo -->
-                    <img src="images/logo.png" class="logo" alt="Himansi logo">
+                    <img src="images/assets/logo.png" class="logo" alt="Himansi logo">
 
                     <!-- Navigation menu -->
                     <ul id="sidemenu">
@@ -53,15 +52,15 @@
                         <li><a href="#achievements">Achievements</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                        <i id="menuClose" class="fa-solid fa-times" aria-label="Close menu"></i>
                     </ul>
                     <!-- Open menu icon (for mobile) -->
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    <i id="menuOpen" class="fa-solid fa-bars" aria-label="Open menu"></i>
                 </nav>
 
                 <!-- Header text / Introduction -->
                 <div class="header-text">
-                    <p>Frontend Developer | Python Learner</p>
+                    <p>Frontend Developer</p>
                     <h1>Hi, I'm <span>Himansi</span><br>Choudhary,<br>a Tech Enthusiast</h1>
                 </div>
             </div>
@@ -73,7 +72,7 @@
                 <div class="row">
                     <!-- Profile image -->
                     <div class="about-col-1">
-                        <img src="images/user.png" alt="Himansi photo">
+                        <img src="images/assets/user.png" alt="Himansi photo">
                     </div>
                     <!-- About me content -->
                     <div class="about-col-2">
@@ -82,9 +81,9 @@
 
                         <!-- Tab titles -->
                         <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience', event)">Experience</p>
-                            <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                            <p class="tab-links active-link" data-tab="skills">Skills</p>
+                            <p class="tab-links" data-tab="experience">Experience</p>
+                            <p class="tab-links" data-tab="education">Education</p>
                         </div>
 
                         <!-- Skills tab -->
@@ -132,51 +131,51 @@
                     <!-- Tools logo scroll area -->
                     <div class="tools-scroll-wrapper">
                         <!-- Each tool with icon and label -->
-                        <div class="tool" style="animation-delay: 0s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" loading="lazy">
                             <span>HTML</span>
                         </div>
-                        <div class="tool" style="animation-delay: 0.5s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" loading="lazy">
                             <span>CSS</span>
                         </div>
-                        <div class="tool" style="animation-delay: 1s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy">
                             <span>JavaScript</span>
                         </div>
-                        <div class="tool" style="animation-delay: 1.5s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" loading="lazy">
                             <span>Python</span>
                         </div>
-                        <div class="tool" style="animation-delay: 2s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy">
                             <span>VS Code</span>
                         </div>
-                        <div class="tool" style="animation-delay: 3s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" loading="lazy">
                             <span>GitHub</span>
                         </div>
-                        <div class="tool" style="animation-delay: 1s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" loading="lazy">
                             <span>C</span>
                         </div>
-                        <div class="tool" style="animation-delay: 1.5s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" loading="lazy">
                             <span>C++</span>
                         </div>
-                        <div class="tool" style="animation-delay: 2s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" loading="lazy">
                             <span>Java</span>
                         </div>
-                        <div class="tool" style="animation-delay: 2.5s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftword.svg" alt="Microsoft Word" loading="lazy" style="filter: invert(16%) sepia(82%) saturate(4323%) hue-rotate(206deg) brightness(92%) contrast(96%);">
                             <span>Word</span>
                         </div>
-                        <div class="tool" style="animation-delay: 3s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftexcel.svg" alt="Microsoft Excel" loading="lazy" style="filter: invert(29%) sepia(78%) saturate(368%) hue-rotate(83deg) brightness(90%) contrast(90%);">
                             <span>Excel</span>
                         </div>
-                        <div class="tool" style="animation-delay: 3.5s;">
+                        <div class="tool">
                             <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoftpowerpoint.svg" alt="Microsoft PowerPoint" loading="lazy" style="filter: invert(50%) sepia(90%) saturate(500%) hue-rotate(340deg) brightness(95%) contrast(90%);">
                             <span>PowerPoint</span>
                         </div>
@@ -196,22 +195,22 @@
                         <i class="fas fa-medal"></i>
                         <h2>2nd Rank - Blind Coding</h2>
                         <p>Secured 2nd position in a blind coding competition at an inter-college tech fest.</p>
-                        <a href="certificates/Blind_Coding_2ndRank.pdf" target="_blank">See Certificate</a>
+                        <a href="certificates/blind_coding_2nd_rank.pdf" target="_blank" rel="noopener noreferrer">See Certificate</a>
                     </div>
                     <div>
                         <i class="fas fa-robot"></i>
                         <h2>AI Primer - Infosys</h2>
                         <p>Completed the Artificial Intelligence Primer course by Infosys Springboard platform.</p>
-                        <a href="certificates/Infosys-Artificial_Intelligence_Primer_Certification.pdf" target="_blank">See Certificate</a>
+                        <a href="certificates/infosys_artificial_intelligence_primer.pdf" target="_blank" rel="noopener noreferrer">See Certificate</a>
                     </div>
                     <div>
                         <i class="fas fa-award"></i>
                         <h2>Avishkaar Participation</h2>
                         <p>Presented a creative tech-based solution as a participant in the Avishkaar event.</p>
-                        <a href="certificates/Avishkar_Participation_Certificate.pdf" target="_blank">See Certificate</a>
+                        <a href="certificates/avishkar_participation_certificate.pdf" target="_blank" rel="noopener noreferrer">See Certificate</a>
                     </div>
                 </div>
-                <a href="achievements.html" class="btn">See more</a>
+                <a href="pages/achievements.html" class="btn">See more</a>
             </div>
         </section>
 
@@ -222,7 +221,7 @@
                 <div class="work-list">
                     <!-- All Projects -->
                     <div class="work">
-                        <img src="images/work1.png" alt="Project 1" loading="lazy">
+                        <img src="images/work/work1.png" alt="Project 1" loading="lazy">
                         <div class="layer">
                             <h3>Personal Portfolio Website</h3>
                             <p>This is the portfolio website you are currently viewing, designed with HTML, CSS, andJavaScript.</p>
@@ -230,7 +229,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/work2.png" alt="Project 2" loading="lazy">
+                        <img src="images/work/work2.png" alt="Project 2" loading="lazy">
                         <div class="layer">
                             <h3>Jarvis Virtual Assistant</h3>
                             <p>A voice-enabled desktop assistant that performs tasks like opening apps, searching Google,and more.</p>
@@ -238,7 +237,7 @@
                         </div>
                     </div>
                     <div class="work">
-                        <img src="images/work3.png" alt="Project 3" loading="lazy">
+                        <img src="images/work/work3.png" alt="Project 3" loading="lazy">
                         <div class="layer">
                             <h3>Netflix Clone</h3>
                             <p>A fully responsive front-end clone of Netflix, built using HTML and CSS for practice.</p>
@@ -246,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="portfolio.html" class="btn">See more</a>
+                <a href="pages/portfolio.html" class="btn">See more</a>
             </div>
         </section>
 
@@ -270,7 +269,7 @@
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <a href="images/Himansi's_resume.pdf" download class="btn btn2">Download CV</a>
+                        <a href="images/assets/himansi_resume.pdf" download class="btn btn2">Download CV</a>
                     </div>
 
                     <!-- Right column: contact form -->
@@ -296,7 +295,7 @@
     </footer>
 
     <!-- External JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
