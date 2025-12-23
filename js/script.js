@@ -42,6 +42,9 @@ document.querySelectorAll('#sidemenu li a').forEach(link => {
     });
 });
 
+
+
+
 // Horizontal scroll with arrow buttons for a tools container
 const scrollWrapper = document.querySelector('.tools-scroll-wrapper');
 const scrollLeftBtn = document.getElementById('scrollLeft');
