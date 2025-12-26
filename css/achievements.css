@@ -9,7 +9,7 @@
     margin-top: 50px;
 }
 
-.achievements-list div {
+.achievements-list article {
     background: var(--secondary-bg);
     padding: 40px;
     font-size: 13px;
@@ -18,28 +18,32 @@
     transition: background 0.5s, transform 0.5s;
 }
 
-.achievements-list div i {
-    /* color: #ff004f; */
+.achievements-list article i {
     font-size: 50px;
     margin-bottom: 30px;
     transition: color 0.3s ease;
 }
 
-.achievements-list div h2 {
+.container h2 {
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.achievements-list article h3 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
     transition: color 0.3s ease;
 }
 
-.achievements-list div p {
+.achievements-list article p {
     color: #aaa;
     margin-bottom: 15px;
     line-height: 1.4;
     transition: color 0.3s ease;
 }
 
-.achievements-list div a {
+.achievements-list article a {
     text-decoration: none;
     color: var(--primary-color);
     font-size: 12px;
@@ -48,10 +52,73 @@
     transition: color 0.3s ease;
 }
 
-.achievements-list div:hover {
+.achievements-list article:hover {
     transform: translateY(-10px);
 }
 
-.achievements-list div:hover p {
+.achievements-list article:hover p {
     color: var(--text-color);
+}
+
+
+
+/* ================= Expandable Categories ================= */
+
+.category {
+    margin-top: 30px;
+    background: var(--secondary-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.category-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.category-header:hover {
+    background: #1f1f1f;
+}
+
+.toggle-icon {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.category-content {
+    display: none;
+    padding: 0 25px 20px;
+}
+
+.category.open .category-content {
+    display: block;
+}
+
+.category-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category-content ul li {
+    margin: 12px 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.category-content ul li a {
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.category-content ul li a:hover {
+    text-decoration: underline;
 }

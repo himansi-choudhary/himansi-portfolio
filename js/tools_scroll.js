@@ -9,17 +9,17 @@ const updateArrowVisibility = () => {
     scrollRightBtn.style.display = scrollWrapper.scrollLeft < maxScrollLeft ? 'block' : 'none';
 };
 
-// Scroll left by 250px smoothly on left button click
+
 scrollLeftBtn.addEventListener('click', () => {
     scrollWrapper.scrollBy({ left: -250, behavior: 'smooth' });
 });
 
-// Scroll right by 250px smoothly on right button click
+
 scrollRightBtn.addEventListener('click', () => {
     scrollWrapper.scrollBy({ left: 250, behavior: 'smooth' });
 });
 
-// Update arrow visibility on scroll and window resize
+
 scrollWrapper.addEventListener('scroll', updateArrowVisibility);
 window.addEventListener('resize', updateArrowVisibility);
 
