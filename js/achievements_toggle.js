@@ -9,3 +9,12 @@ document.querySelectorAll('.category-header').forEach(header => {
         header.setAttribute('aria-expanded', category.classList.contains('open'));
     });
 });
+
+const firstCategory = document.querySelector('.category');
+if (firstCategory) {
+    firstCategory.classList.add('open');
+    const firstIcon = firstCategory.querySelector('.toggle-icon');
+    const firstHeader = firstCategory.querySelector('.category-header');
+    if (firstIcon) firstIcon.textContent = '-';
+    if (firstHeader) firstHeader.setAttribute('aria-expanded', 'true');
+}
