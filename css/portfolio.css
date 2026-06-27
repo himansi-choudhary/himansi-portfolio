@@ -13,13 +13,23 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    background: #1a1a1a;
 }
 
 .work img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     display: block;
     transition: transform 0.5s;
+}
+
+.work .project-title {
+    display: block;
+    padding: 15px 15px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
 }
 
 .layer {
