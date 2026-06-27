@@ -59,3 +59,32 @@ body {
 .btn:hover {
     background: var(--primary-color);
 }
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.page-header .sub-title {
+    margin: 0;
+}
+
+.page-header .btn {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-header .btn {
+        margin-top: 10px;
+    }
+}
